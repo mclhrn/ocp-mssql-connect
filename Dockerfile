@@ -1,7 +1,6 @@
-FROM node:lts-alpine3.16
+FROM node:16.19.1-bullseye-slim
 WORKDIR /app
 COPY package*.json ./
-RUN npm cache clean
 RUN npm install
 COPY . .
 EXPOSE 3000
